@@ -5,7 +5,7 @@ module ModelAttributesLocales
   require 'model_attributes_locales/railtie' if defined? ::Rails::Railtie
 
   def self.generate
-    text += '\t activerecord:'
+    text = '\t activerecord:'
     ActiveRecord::Base.connection.tables.map do |model|
       begin
         m = model.classify.constantize
