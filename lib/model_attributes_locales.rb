@@ -25,7 +25,7 @@ module ModelAttributesLocales
 
 
     target = "#{Rails.root}/config/locales/model_attributes_locales.yml}"
-    File.open(target, 'w') {|f| f.write d.to_yaml } #Store
+    File.open(target, 'w') {|f| f.write text } #Store
 
   end
 
