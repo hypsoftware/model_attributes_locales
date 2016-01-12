@@ -12,9 +12,9 @@ module ModelAttributesLocales
     ActiveRecord::Base.connection.tables.map do |model|
       begin
         m = model.classify.constantize
-        text += "\t\t" + model.singularize + ":"
+        text += "\n\t\t" + model.singularize + ":"
         m.column_names.each do |name|
-          text += "\t\t\t" + name + ":"
+          text += "\n\t\t\t" + name + ":"
         end
 
       rescue
