@@ -8,13 +8,13 @@ module ModelAttributesLocales
 
   def self.generate
 
-    text = '/\t activerecord:'
+    text = "\t activerecord:"
     ActiveRecord::Base.connection.tables.map do |model|
       begin
         m = model.classify.constantize
-        text += '/\t/\t' + model.singularize + ":"
+        text += "\t\t" + model.singularize + ":"
         m.column_names.each do |name|
-          text += '/\t/\t/\t' + name + ":"
+          text += "\t\t\t" + name + ":"
         end
 
       rescue
@@ -25,7 +25,7 @@ module ModelAttributesLocales
 
 
     target = "#{Rails.root}/config/locales/model_attributes_locales.yml}"
-    File.open(target, 'w') {|f| f.write text } #Store
+    File.open(target, "w") {|f| f.write text } #Store
 
   end
 
