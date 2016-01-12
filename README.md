@@ -1,26 +1,48 @@
 # ModelAttributesLocales
 
-TODO: Write a gem description
+Have you haver needed to write a locales yml for your model attributes? Was it exhausting?
 
+**Don't Worry!!**
+
+This Gem will help you do that.
+
+Now with a simple Rails Console command you can generate the stubs for all your models attributes! You only need to fill it in with your own translations!
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'model_attributes_locales'
+group :development do
+  gem 'model_attributes_locales'
+end
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install model_attributes_locales
-
 ## Usage
 
-TODO: Write usage instructions here
+After installing the gem just open your projects Rails Console and run
+
+```ruby
+  ModelAttributesLocales.generate
+```
+
+This command will create a file on your /config/locales/ folder with the part for your model attributes.
+
+You should copy and paste it to your locales file.
+
+Then you can delete the file as it shouldn't be needed anymore.
+
+## Sample Output
+
+
+## TODO
+
+* Add a rake task to replace the Rails Console command.
+* Question the user what is the translation for each word.
+* Add automatic translations, given a determined language
 
 ## Contributing
 
