@@ -13,14 +13,17 @@ module ModelAttributesLocales
         m.column_names.each do |name|
           text += '\t\t\t' + name + ":"
         end
+
       rescue
         #puts "No Class"
       end
-      target = "#{Rails.root}/config/locales/model_attributes_locales.yml}"
-      puts "File Written: "
-      File.open(target, "w") do |f|
-        f.write(text)
-      end
+      puts "Next Model"
+    end
+
+    target = "#{Rails.root}/config/locales/model_attributes_locales.yml}"
+    puts "File Written: "
+    File.open(target, "w") do |f|
+      f.write(text)
     end
   end
 
