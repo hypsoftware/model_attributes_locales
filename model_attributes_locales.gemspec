@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = ModelAttributesLocales::VERSION
   spec.authors       = ["joaoribeirost"]
   spec.email         = ["joaoribeirost@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "This gem lets you generate the locales stubs for all your model attributes"
+  spec.description   = "This gem lets you generate the locales stubs for all your model attributes."
   spec.homepage      = ""
   spec.license       = "MIT"
 
