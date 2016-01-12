@@ -16,7 +16,11 @@ module ModelAttributesLocales
       rescue
         #puts "No Class"
       end
-      puts text
+      target = "#{Rails.root}/config/locales/model_attributes_locales.yml}"
+      puts "File Written: "
+      File.open(target, "w") do |f|
+        f.write(content)
+      end
     end
   end
 
