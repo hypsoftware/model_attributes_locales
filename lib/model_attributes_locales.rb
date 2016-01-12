@@ -19,7 +19,7 @@ module ModelAttributesLocales
       target = "#{Rails.root}/config/locales/model_attributes_locales.yml}"
       puts "File Written: "
       File.open(target, "w") do |f|
-        f.write(content)
+        f.write(text)
       end
     end
   end
