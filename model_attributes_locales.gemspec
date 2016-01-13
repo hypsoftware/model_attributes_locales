@@ -6,8 +6,8 @@ require 'model_attributes_locales/version'
 Gem::Specification.new do |spec|
   spec.name          = "model_attributes_locales"
   spec.version       = ModelAttributesLocales::VERSION
-  spec.authors       = ["joaoribeirost"]
-  spec.email         = ["joaoribeirost@gmail.com"]
+  spec.authors       = ["hypsoftware", "joaoribeirost"]
+  spec.email         = ["software.hyp@gmail.com", "joaoribeirost@gmail.com"]
   spec.summary       = "This gem lets you generate the locales stubs for all your model attributes"
   spec.description   = "With this gem you can generate the stubs for all your models attributes! That way you can "
   spec.homepage      = "https://github.com/hypsoftware/model_attributes_locales"
