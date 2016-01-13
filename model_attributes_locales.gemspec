@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["joaoribeirost"]
   spec.email         = ["joaoribeirost@gmail.com"]
   spec.summary       = "This gem lets you generate the locales stubs for all your model attributes"
-  spec.description   = "This gem lets you generate the locales stubs for all your model attributes."
-  spec.homepage      = ""
+  spec.description   = "With this gem you can generate the stubs for all your models attributes! That way you can "
+  spec.homepage      = "https://github.com/hypsoftware/model_attributes_locales"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

@@ -19,7 +19,7 @@ end
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 ## Usage
 
@@ -37,12 +37,58 @@ Then you can delete the file as it shouldn't be needed anymore.
 
 ## Sample Output
 
+For a project with Bookmarks, Comments, Tags and Groups, for example, it outpus the following yaml code:
+```yaml
+activerecord:
+ comment:
+   id:
+   comment:
+   created_at:
+   updated_at:
+   bookmark_id:
+   user_id:
+ bookmark:
+   id:
+   name:
+   description:
+   url:
+   created_at:
+   updated_at:
+   group_id:
+   user_id:
+ tag:
+   id:
+   name:
+   created_at:
+   updated_at:
+   group_id:
+ group:
+   id:
+   name:
+   description:
+   created_at:
+   updated_at:
+   avatar_file_name:
+   avatar_content_type:
+   avatar_file_size:
+   avatar_updated_at:
+   color:
+   comment_permission:
+   tag_permission:
+```
+Now, all you have to do is paste it into your locales file an translate it. Enjoy! :)
+
+Be advised about the identation of the file. The **ativerecord node** should come inside the language node.
 
 ## TODO
 
 * Add a rake task to replace the Rails Console command.
 * Question the user what is the translation for each word.
 * Add automatic translations, given a determined language
+
+## Bugs
+
+If yoy find any bugs and/or have any sugestions please feel free to open a Issue to let us know about it!
 
 ## Contributing
 
