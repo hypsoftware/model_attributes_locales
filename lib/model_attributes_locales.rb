@@ -7,24 +7,29 @@ module ModelAttributesLocales
   require 'model_attributes_locales/railtie' if defined? ::Rails::Railtie
 
   def self.generate
-
-    text = "\t activerecord:"
+    text = "  activerecord:"
+    text += "\n    models:"
+    ActiveRecord::Base.connection.tables.map do |model|
+      begin
+        text += "\n      " + model.singularize + ":"
+      rescue
+        #puts "No Class"
+      end
+    end
+    text += "\n    attributes:"
     ActiveRecord::Base.connection.tables.map do |model|
       begin
         m = model.classify.constantize
-        text += "\n\t\t" + model.singularize + ":"
+        text += "\n      " + model.singularize + ":"
         m.column_names.each do |name|
-          text += "\n\t\t\t" + name + ":"
+          text += "\n        " + name + ":"
         end
 
       rescue
         #puts "No Class"
       end
-      puts "Next Model"
     end
-
-
-    target = "#{Rails.root}/config/locales/model_attributes_locales.yml}"
+    target = "#{Rails.root}/config/locales/model_attributesss_locales.yml"
     File.open(target, "w") {|f| f.write text } #Store
 
   end
